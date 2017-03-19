@@ -70,8 +70,6 @@ void executeCB(const control_msgs::FollowJointTrajectoryGoalConstPtr &goal){
   msg.velocity.push_back(goal->trajectory.points[0].velocities[i]);
   msg.velocity.push_back(goal->trajectory.points[0].effort[i]);
 
-  ROS_INFO_STREAM("---------------------");
-
     // publish the velocity command
     pub_.publish(msg);
 
