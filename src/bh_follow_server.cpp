@@ -67,7 +67,7 @@ void executeCB(const control_msgs::FollowJointTrajectoryGoalConstPtr &goal){
   msg.velocity.push_back(goal->trajectory.points[0].velocities[i]);
   msg.velocity.push_back(goal->trajectory.points[0].effort[i]);
 
-    // publish the velocity command
+     // publish the velocity command
     pub_.publish(msg);
 
     r.sleep();
