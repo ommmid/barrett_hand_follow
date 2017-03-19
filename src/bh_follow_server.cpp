@@ -53,9 +53,6 @@ void executeCB(const control_msgs::FollowJointTrajectoryGoalConstPtr &goal){
 
   sensor_msgs::JointState msg;
 
-  int sizeofall = sizeof(goal->trajectory.joint_names);
-  int sizeofone = sizeof(goal->trajectory.points[0]);
-
     msg.header.seq = goal->trajectory.header.seq;
     msg.header.stamp.sec = goal->trajectory.header.stamp.sec;
     msg.header.stamp.nsec = goal->trajectory.header.stamp.nsec;
